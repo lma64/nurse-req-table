@@ -29,8 +29,16 @@ const Form = () => {
         </div>
 
         <div className='form-check form-switch'>
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
-            <label class="form-check-label" for="flexSwitchCheckDefault">Enable nurse request</label>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
+          <label class="form-check-label" for="flexSwitchCheckDefault">Nurse request</label>
+        </div>
+        <div className='form-check form-switch'>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+          <label class="form-check-label" for="flexSwitchCheckDefault">Housekeeping request</label>
+        </div>
+        <div className='form-check form-switch'>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+          <label class="form-check-label" for="flexSwitchCheckDefault">Food request</label>
         </div>
 
         <div className='wh-table'>
