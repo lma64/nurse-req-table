@@ -1,6 +1,5 @@
 .container {
     position: relative;
-    margin-top: 1%;
     background-color: white;
     border-radius: 5px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
@@ -8,7 +7,7 @@
 
 .h1-title {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 1.7rem;
 }
 
@@ -31,13 +30,13 @@ table {
     width: 100%;
 }
   
-td, th {
+.td2, .th2 {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
   
-tr:nth-child(even) {
+.tr2:nth-child(even) {
     background-color: #dddddd;
 }
 
@@ -45,3 +44,17 @@ tr:nth-child(even) {
     cursor: default;
 }
 
+.td1, .th1 {
+    border: none;
+    text-align: left;
+    padding: 8px;
+  
+}
+  
+.no-bold {
+    font-weight: normal;
+}
+  
+.bold {
+    font-weight: bold;
+}
