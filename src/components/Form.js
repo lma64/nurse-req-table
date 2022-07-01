@@ -15,7 +15,7 @@ const Form = () => {
   const [requests, setRequests] = useState([]);
   useEffect(() => {
       axios.get("https://0gfyumgx0f.execute-api.us-east-2.amazonaws.com/api/get_enabled_requests")
-        .then((res) => console.log(res.data))
+        .then((res) => setRequests(res.data))
         .then((error) => console.log(error));
   }, []);
 
@@ -35,24 +35,12 @@ const Form = () => {
             </select>
         </div>
 
-        {/* <div className='form-check form-switch'>
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
-          <label class="form-check-label" for="flexSwitchCheckDefault">Nurse request</label>
-        </div>
-        <div className='form-check form-switch'>
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-          <label class="form-check-label" for="flexSwitchCheckDefault">Housekeeping request</label>
-        </div>
-        <div className='form-check form-switch'>
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-          <label class="form-check-label" for="flexSwitchCheckDefault">Food request</label>
-        </div> */}
         <table class="table table-borderless">
             <thead>
               <tr className='tr1'>
-                <th className='th1' scope="col">Housekeeping requests</th>
-                <th className='th1' scope="col">Food requests</th>
-                <th className='th1' scope="col">Nurse requests</th>
+                <th className='th1' scope="col">Housekeeping</th>
+                <th className='th1' scope="col">Food</th>
+                <th className='th1' scope="col">Nurse</th>
               </tr>
             </thead>
             <tbody>
@@ -107,62 +95,52 @@ const Form = () => {
                 <td className='td1'></td>
               </tr>
             </tbody>
-          </table>
-
+          </table> 
 
         <div className='wh-table'>
         <table>
           <tr className='default_cursor tr2'>
-            <th className='th2'>Working Hours</th>
-            <th className='th2'>Monday</th>
-            <th className='th2'>Tuesday</th>
-            <th className='th2'>Wednesday</th>
-            <th className='th2'>Thursday</th>
-            <th className='th2'>Friday</th>
-            <th className='th2'>Saturday</th>
-            <th className='th2'>Sunday</th>
+            <th className='th2'></th>
+            <th className='th2'>Start</th>
+            <th className='th2'>End</th>
           </tr>
           <tr className='tr2'>
-            <td className='default_cursor td2'>AM shift start</td>
-            <td className='td2'contenteditable="true">8:00</td>
-            <td className='td2'contenteditable="true">9:00</td>
-            <td className='td2'contenteditable="true"></td>
-            <td className='td2'contenteditable="true"></td>
-            <td className='td2'contenteditable="true"></td>
-            <td className='td2'contenteditable="true"></td>
-            <td className='td2'contenteditable="true"></td>
+            <td className='default_cursor td2'>Monday</td>
+            <td className='td2'contenteditable="true">8:00 - 13:00</td>
+            <td className='td2'contenteditable="true">12:00 - 17:00</td>
           </tr>
           <tr className='tr2'>
-            <td className='default_cursor td2'>AM shift end</td>
-            <td className='td2'contenteditable="true">12:00</td>
-            <td className='td2'contenteditable="true">12:00</td>
-            <td className='td2'contenteditable="true"></td>
-            <td className='td2'contenteditable="true"></td>
-            <td className='td2'contenteditable="true"></td>
+            <td className='default_cursor td2'>Tuesday</td>
+            <td className='td2'contenteditable="true">9:00 - 14:00</td>
+            <td className='td2'contenteditable="true">12:00 - 17:00</td>
+          </tr>
+          <tr className='tr2'>
+            <td className='default_cursor td2'>Wednesday</td>
             <td className='td2'contenteditable="true"></td>
             <td className='td2'contenteditable="true"></td>
           </tr>
           <tr className='tr2'>
-            <td className='default_cursor td2'>PM shift start</td>
-            <td className='td2'contenteditable="true">13:00</td>
-            <td className='td2'contenteditable="true">14:00</td>
-            <td className='td2'contenteditable="true"></td>
-            <td className='td2'contenteditable="true"></td>
-            <td className='td2'contenteditable="true"></td>
+            <td className='default_cursor td2'>Thursday</td>
             <td className='td2'contenteditable="true"></td>
             <td className='td2'contenteditable="true"></td>
           </tr>
           <tr className='tr2'>
-            <td className='default_cursor td2'>PM shift end</td>
-            <td className='td2'contenteditable="true">17:00</td>
-            <td className='td2'contenteditable="true">17:00</td>
+            <td className='default_cursor td2'>Friday</td>
             <td className='td2'contenteditable="true"></td>
             <td className='td2'contenteditable="true"></td>
+          </tr>
+          <tr className='tr2'>
+            <td className='default_cursor td2'>Saturday</td>
             <td className='td2'contenteditable="true"></td>
+            <td className='td2'contenteditable="true"></td>
+          </tr>
+          <tr className='tr2'>
+            <td className='default_cursor td2'>Sunday</td>
             <td className='td2'contenteditable="true"></td>
             <td className='td2'contenteditable="true"></td>
           </tr>
         </table>
+        <button className='save-btn'> Save </button>
         </div>
         <br/>
       </div>
