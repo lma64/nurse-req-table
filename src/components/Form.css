@@ -70,3 +70,8 @@ table {
 .save-btn:hover {
     background-color: rgb(196, 194, 194);
 }
+
+.bold-label {
+    font-weight: bold;
+    padding-bottom:3%;
+}
