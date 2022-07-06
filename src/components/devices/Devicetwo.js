@@ -121,8 +121,8 @@ const Devicetwo = () => {
           </tr>
           <tr className='tr2'>
             <td className='default_cursor td2'>Monday</td>
-            <td className='td2'><input type="time" className='time-input'/></td>
-            <td className='td2'><input type="time" className='time-input'/></td>
+            <td className='td2'><input type="time" className='time-input' value="10:49"/></td>
+            <td className='td2'><input type="time" className='time-input' value="00:49"/></td>
           </tr>
           <tr className='tr2'>
             <td className='default_cursor td2'>Tuesday</td>
@@ -131,18 +131,18 @@ const Devicetwo = () => {
           </tr>
           <tr className='tr2'>
             <td className='default_cursor td2'>Wednesday</td>
-            <td className='td2'><input type="time" className='time-input'/></td>
-            <td className='td2'><input type="time" className='time-input'/></td>
+            <td className='td2'><input type="time" className='time-input' value="09:49"/></td>
+            <td className='td2'><input type="time" className='time-input' value="00:49"/></td>
           </tr>
           <tr className='tr2'>
             <td className='default_cursor td2'>Thursday</td>
-            <td className='td2'><input type="time" className='time-input'/></td>
-            <td className='td2'><input type="time" className='time-input'/></td>
+            <td className='td2'><input type="time" className='time-input' value="08:49"/></td>
+            <td className='td2'><input type="time" className='time-input' value="20:54"/></td>
           </tr>
           <tr className='tr2'>
             <td className='default_cursor td2'>Friday</td>
-            <td className='td2'><input type="time" className='time-input'/></td>
-            <td className='td2'><input type="time" className='time-input'/></td>
+            <td className='td2'><input type="time" className='time-input' value="09:49"/></td>
+            <td className='td2'><input type="time" className='time-input'value="00:49"/></td>
           </tr>
           <tr className='tr2'>
             <td className='default_cursor td2'>Saturday</td>

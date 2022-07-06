@@ -3,15 +3,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
 
 const Deviceone = () => {
+  var d = new Date('2015-03-04T00:00:00.000Z');
 
   function Buttontoggle()
-  {
-    var t = document.getElementById("flexSwitchCheckDefault");
-    if(t.value=='on'){
-      t.value='off';
+  { if(document.getElementById("flexSwitchCheckDefault").checked){
+      document.getElementById("flexSwitchCheckDefault").checked = false;
     }
-    else if(t.value=='off'){
-      alert(t.value)
+    else {
+      document.getElementById("flexSwitchCheckDefault").checked = true;
     }
   }
     const [requests, setRequests] = useState([]);
@@ -47,14 +46,10 @@ const Deviceone = () => {
         <div className="col">
           <div className='bold-label'>Food Services</div>
           <div className='form-check form-switch'>
+            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
             {requests.map((request) => (
               <>
-                {String(request.title) == "Food Services" && request.isAllowed == true && 
-                  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked onClick={Buttontoggle}/>
-                }
-                {String(request.title) == "Food Services" && request.isAllowed == false && 
-                  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={Buttontoggle}/>
-                }
+
                 <label className="form-check-label" for="flexSwitchCheckDefault">
                   {String(request.title) == "Food Services" && request.Title}
                 </label>
@@ -136,13 +131,13 @@ const Deviceone = () => {
             </tr>
             <tr className='tr2'>
               <td className='default_cursor td2'>Tuesday</td>
-              <td className='td2'><input type="time" className='time-input'/></td>
-              <td className='td2'><input type="time" className='time-input'/></td>
+              <td className='td2'><input type="time" className='time-input' value="08:49"/></td>
+              <td className='td2'><input type="time" className='time-input' value="20:49"/></td>
             </tr>
             <tr className='tr2'>
               <td className='default_cursor td2'>Wednesday</td>
-              <td className='td2'><input type="time" className='time-input'/></td>
-              <td className='td2'><input type="time" className='time-input'/></td>
+              <td className='td2'><input type="time" className='time-input' value="09:49"/></td>
+              <td className='td2'><input type="time" className='time-input' value="00:49"/></td>
             </tr>
             <tr className='tr2'>
               <td className='default_cursor td2'>Thursday</td>
